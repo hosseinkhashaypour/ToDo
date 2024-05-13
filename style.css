@@ -1,0 +1,298 @@
+:root {
+  --fontirs: irs;
+  --fontbahman: bahman;
+  --fontlale: lale;
+  --fontaviny: aviny;
+  --color1: #04aa6d;
+  --color2: #6528e0;
+  --color3: rgb(7 112 112);
+  --color4: rgb(23, 240, 23);
+  --color5: #0c0025;
+  --color6: rgb(1, 1, 54);
+  --color7: #171615;
+  --color8: #1d1615;
+  --color9: #20211a;
+  --color10: #141514;
+  --color11: #0f0616;
+  --color12: #292827;
+  --glasswhite: rgba(255, 255, 255, 0.5);
+  --bg-light: #eee;
+  --bg-dark: #444;
+  --bg-dark-2: #151515;
+}
+
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: irs;
+  src: url(IRANSansWeb_Bold.ttf);
+}
+
+@font-face {
+  font-family: lale;
+  src: url(Lalezar-Regular.ttf);
+}
+
+@font-face {
+  font-family: bahman;
+  src: url(Bahman\ 1.ttf);
+}
+
+@font-face {
+  font-family: aviny;
+  src: url(aviny.ttf);
+}
+* {
+  box-sizing: border-box;
+  font-family: var(--fontlale);
+  flex-direction: column;
+  text-align: center;
+}
+body {
+  overflow-x: hidden;
+  transition: background-color 1s;
+  background: linear-gradient(#ffffff, #ffcc80) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  height: 80vh;
+  user-select: none;
+}
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: block;
+  background-color: #0e4166;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(14, 65, 102, 0.86),
+    #0e4166
+  );
+}
+@media (min-width: 301px) {
+  #form-container > .TodoInput > form > #todo-Text {
+    /* background-color: red; */
+    width: 330px;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    /* font-size: 20px; */
+    /* position: fixed; */
+  }
+  #form-container input {
+    background-color: var(--color10);
+    color: white;
+    overflow: auto;
+  }
+  #form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+  }
+  #todo-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+    padding: 5px;
+    width: 50%;
+    border-radius: 296px;
+    outline: none;
+    border: none;
+    z-index: 5;
+  }
+  #created-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    text-align: left;
+    width: 80%;
+    margin-right: 30%;
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%); */
+  }
+  #created-list > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    text-align: center;
+    list-style-type: none;
+    /* z-index: 5; */
+    /* background-color: red; */
+    color: white;
+    background-color: var(--color2);
+    margin-left: 42%;
+    /* margin-right: 10%; */
+    padding: 10px 20px;
+    width: 80%;
+    border-radius: 10px;
+    margin-top: 5%;
+  }
+  #created-list > ul > .assests {
+    display: none;
+
+    /* justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: row; */
+  }
+  /* #created-list > ul > .assests > img > .checked{
+    margin-left: 500px;
+  } */
+
+  img {
+    width: 10%;
+    /* aspect-ratio: 16/9; */
+  }
+  #smtTodo {
+    display: none;
+    color: black;
+    z-index: 5;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: -40%;
+  }
+  #smtTodo > h1 {
+    font-size: 20px;
+  }
+  button {
+    background-color: var(--color1);
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
+  #addItem {
+    display: none;
+    z-index: 5;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  #done {
+    display: none;
+    z-index: 5;
+    color: white;
+    background-color: rgb(0, 230, 0);
+    padding: 10px;
+    border-radius: 10px;
+  }
+  #done > h1 {
+    font-size: 20px;
+  }
+}
+
+/* responsive */
+
+@media (min-width: 450px) {
+  #form-container > .TodoInput > form > #todo-Text {
+    /* background-color: red; */
+    width: 500px;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    /* font-size: 20px; */
+    /* position: fixed; */
+  }
+  #form-container input {
+    background-color: var(--color10);
+    color: white;
+  }
+  #form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+  }
+  #todo-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+    padding: 5px;
+    width: 50%;
+    border-radius: 296px;
+    outline: none;
+    border: none;
+    z-index: 5;
+  }
+  #todo-btn:hover {
+    opacity: 0.5;
+  }
+  #created-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    text-align: left;
+    width: 80%;
+    /* margin-right: 30%; */
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%); */
+  }
+  #created-list > ul > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    text-align: left;
+    list-style-type: none;
+    /* z-index: 5; */
+    /* background-color: red; */
+    color: white;
+    background-color: var(--color2);
+    text-align: right;
+    /* margin-right: 10%; */
+    padding: 10px 20px;
+    width: 80%;
+    border-radius: 10px;
+    /* margin-right: 500%; */
+    /* margin: %; */
+  }
+
+  #created-list > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    text-align: left;
+    list-style-type: none;
+    /* z-index: 5; */
+    /* background-color: red; */
+    color: white;
+    background-color: var(--color2);
+    text-align: right;
+    /* margin-right: 10%; */
+    padding: 10px 20px;
+    width: 70%;
+    margin-top: 5%;
+
+    border-radius: 10px;
+    /* margin-right: 500%; */
+    /* margin: 2%; */
+    margin-top: 8px;
+    margin-right: 4%;
+  }
+  #created-list > li:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+}
